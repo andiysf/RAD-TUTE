@@ -8,7 +8,6 @@ class UsersController < ApplicationController
   def create
     @user = User.new(user_params)
     if @user.save
-      log_in @user
       flash[:success] = "Welcome to Tute 6!"
       redirect_to @user
     # Handle a successful save.
